@@ -1,8 +1,10 @@
 <template>
   <div class="container">
     <Header/>
-    <router-view />
-    <Footer/>
+    <div class="router-view">
+      <router-view />
+      <Footer/>
+    </div>
   </div>
 </template>
 
@@ -19,5 +21,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.container {
+  width: 100%;
+}
+.router-view {
+  background: #FFF;
+}
 </style>
