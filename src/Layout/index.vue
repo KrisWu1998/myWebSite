@@ -2,9 +2,13 @@
   <div class="container">
     <Header/>
     <div class="router-view">
-      <router-view />
-      <Footer/>
+      <!-- <div class="wrap">
+        <div class="main"> -->
+          <router-view />
+        <!-- </div>
+      </div> -->
     </div>
+    <Footer/>
   </div>
 </template>
 

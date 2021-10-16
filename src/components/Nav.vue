@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="wrap">
     <div class="main">
       <div>logo</div>
       <ul>
@@ -26,8 +26,6 @@ export default {
 <style lang="less" scoped>
 nav {
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
   position: fixed;
   width: 100%;
   height: 50px;
