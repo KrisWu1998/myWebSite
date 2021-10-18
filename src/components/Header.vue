@@ -3,6 +3,8 @@
     <Nav />
     <div class="imgBg">
       <div class="mask" />
+      <h1>Kris Wu</h1>
+      <p>Don't change the world, just change yourself</p>
     </div>
   </header>
 </template>
@@ -22,6 +24,9 @@ header {
   width: 100%;
   height: calc(450px);
   .imgBg {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     position: fixed;
     z-index: -1;
     width: 100%;
@@ -39,6 +44,21 @@ header {
       right: 0;
       background: #000;
       opacity: 0.3;
+    }
+    h1, p {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      z-index: 9999;
+      color: #FFF;
+    }
+    h1 {
+      margin-top: 100px;
+      font-size: 50px;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 20px;
     }
   }
 }

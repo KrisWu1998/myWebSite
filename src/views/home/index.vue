@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- 站长介绍 -->
-    <My />
+    <!-- <My /> -->
     <div class="wrap">
       <div class="main">
         <ul>
