@@ -1,6 +1,6 @@
 <template>
   <div class="article-Item">
-    <div class="title">Vue3.0学习分享</div>
+    <div class="title">这是文章Item</div>
     <hr />
     <div class="msg">
       <div class="msg-item">

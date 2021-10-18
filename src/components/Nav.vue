@@ -52,17 +52,31 @@ nav {
     ul {
       display: flex;
       li {
+        position: relative;
         list-style: none;
         box-sizing: border-box;
         padding: 10px;
         margin-right: 10px;
         cursor: pointer;
-        :hover {
-          border-bottom: 2px solid #FFF;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #FFF;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: .3s ease-in-out;
+        }
+        &:hover {
+          &::after {
+            visibility: visible;
+            transform: scaleX(1);
+          }
         }
       }
     }
-  
-  
 }
 </style>

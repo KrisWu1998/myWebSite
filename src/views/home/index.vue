@@ -40,7 +40,6 @@
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -58,7 +57,7 @@ export default {
   setup () {
     const state = reactive({
       list: [
-        1,2,3,4,5,6,7
+        1,2,3,4,5,6,7,8,9
       ],
       page: 1,
       pageSzie: 10,
@@ -86,17 +85,21 @@ export default {
 .home {
   .container {
     display: flex;
+    align-items: flex-start;
     margin: 20px 0;
     .article {
       width: 70%;
     }
     .master {
+      position: sticky;
+      top: 75px;
       border-radius: 5px;
       box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
       transition: all .3s;
       flex: 1;
       margin-left: 15px;
       padding: 0 15px;
+      background: #FFF;
       &:hover {
         box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
       }
