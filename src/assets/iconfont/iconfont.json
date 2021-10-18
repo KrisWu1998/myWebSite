@@ -1,0 +1,30 @@
+{
+  "id": "1522380",
+  "name": "web",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "925645",
+      "name": "头像",
+      "font_class": "icontouxiang",
+      "unicode": "e678",
+      "unicode_decimal": 59000
+    },
+    {
+      "icon_id": "1727450",
+      "name": "217时间",
+      "font_class": "shijian",
+      "unicode": "e8c5",
+      "unicode_decimal": 59589
+    },
+    {
+      "icon_id": "4304674",
+      "name": "label",
+      "font_class": "biaoqian",
+      "unicode": "e6d8",
+      "unicode_decimal": 59096
+    }
+  ]
+}
