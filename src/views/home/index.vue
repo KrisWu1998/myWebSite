@@ -37,6 +37,22 @@
             </div>
           </div>
           <hr />
+          <div class="tags">
+            <h4>
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-biaoqian"></use>
+              </svg>
+              标签
+            </h4>
+            <div class="tags-group">
+              <el-tag>潮汕后生仔</el-tag>
+              <el-tag>前端</el-tag>
+              <el-tag type="success">幽默</el-tag>
+              <el-tag>靓仔</el-tag>
+              <el-tag type="success">游戏玩家</el-tag>
+              <el-tag>爱吃炸鸡，串串</el-tag>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -98,7 +114,7 @@ export default {
       transition: all .3s;
       flex: 1;
       margin-left: 15px;
-      padding: 0 15px;
+      padding: 15px;
       background: #FFF;
       &:hover {
         box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
@@ -141,6 +157,23 @@ export default {
       hr {
         border-top: 0px solid #eaecef;
         margin: 7.5px 0;
+      }
+      .tags {
+        .icon {
+          width: 15px;
+          height: 15px;
+          vertical-align: -0.15em;
+          fill: currentColor;
+          overflow: hidden;
+          margin-right: 8px;
+        }
+        .tags-group {
+          margin-top: 10px;
+          .el-tag{
+            margin-right: 10px;
+            margin-bottom: 5px;
+          }
+        }
       }
     }
   }
