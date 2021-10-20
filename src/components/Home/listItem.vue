@@ -1,6 +1,6 @@
 <template>
   <div class="article-Item">
-    <div class="title">这是文章Item</div>
+    <div class="title" @click="handleGo">这是文章Item</div>
     <hr />
     <div class="msg">
       <div class="msg-item">
@@ -26,9 +26,16 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router';
 export default {
   setup() {
-    
+    const router = useRouter();
+    const handleGo = () => {
+      router.push('/article/1');
+    };
+    return {
+      handleGo
+    }
   },
 }
 </script>

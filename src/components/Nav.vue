@@ -6,7 +6,7 @@
     </div>
     <ul>
       <li>
-        <a>首页</a>
+        <router-link to="/">首页</router-link>
       </li>
       <li>
         <a>关于我</a>
@@ -75,6 +75,10 @@ nav {
             visibility: visible;
             transform: scaleX(1);
           }
+        }
+        a {
+          color: #FFF;
+          text-decoration: none;
         }
       }
     }

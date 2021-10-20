@@ -48,7 +48,7 @@
               <el-tag>潮汕后生仔</el-tag>
               <el-tag>前端</el-tag>
               <el-tag type="success">幽默</el-tag>
-              <el-tag>靓仔</el-tag>
+              <el-tag>广东靓仔</el-tag>
               <el-tag type="success">游戏玩家</el-tag>
               <el-tag>爱吃炸鸡，串串</el-tag>
             </div>
