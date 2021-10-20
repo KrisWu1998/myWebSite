@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Nav />
+    <!-- <Nav /> -->
     <div class="imgBg">
       <div class="mask" />
       <h1>Kris Wu</h1>
@@ -10,11 +10,9 @@
 </template>
 
 <script>
-import Nav from './Nav.vue';
+
 export default {
-  components: {
-    Nav
-  }
+  
 }
 
 </script>
@@ -24,9 +22,6 @@ header {
   width: 100%;
   height: calc(450px);
   .imgBg {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     position: fixed;
     z-index: -1;
     width: 100%;
@@ -34,7 +29,6 @@ header {
     padding-top: 50px;
     background: url('../assets/img/bg.jpg');
     background-repeat: no-repeat;
-    // background-size: 100% 100%;
     background-size:cover;
     .mask {
       position: absolute;

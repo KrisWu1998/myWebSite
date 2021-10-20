@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "17095619",
+      "name": "火箭",
+      "font_class": "262",
+      "unicode": "e73e",
+      "unicode_decimal": 59198
+    },
+    {
       "icon_id": "925645",
       "name": "头像",
       "font_class": "icontouxiang",

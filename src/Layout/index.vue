@@ -1,25 +1,47 @@
 <template>
-  <div class="container">
+  <div class="container" ref="container">
+    <Nav :flag="isBeyondHeader"/>
     <Header/>
     <div class="router-view">
-      <!-- <div class="wrap">
-        <div class="main"> -->
-          <router-view />
-        <!-- </div>
-      </div> -->
+      <router-view />
     </div>
     <Footer/>
+    <el-backtop :bottom="100" v-show="isBeyondHeader">
+      <div
+        class="fiexd-scroll"
+      >
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-262"></use>
+        </svg>
+      </div>
+    </el-backtop>
   </div>
 </template>
 
 <script>
+import Nav from '../components/Nav.vue';
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
+import { ref, onMounted, reactive, toRefs } from 'vue';
 export default {
   name: 'Layout',
   components: {
+    Nav,
     Header,
     Footer
+  },
+  setup () {
+    const state = reactive({
+      isBeyondHeader: false, // 是否已滚动到内容区
+    })
+    onMounted(()=>{
+      window.addEventListener('scroll', function () {
+        state.isBeyondHeader = document.documentElement.scrollTop >= 390;
+      })
+    })
+    return {
+      ...toRefs(state)
+    }
   }
 }
 </script>
@@ -31,4 +53,17 @@ export default {
 .router-view {
   background: #FFF;
 }
+.fiexd-scroll {
+  width: 50px;
+  height: 50px;
+  .icon {
+    width: 50px;
+    height: 50px;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    margin-right: 8px;
+  }
+}
+
 </style>

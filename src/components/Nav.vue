@@ -1,5 +1,5 @@
 <template>
-  <nav class="wrap">
+  <nav :class="['wrap', flag ? 'bg-change' : '']">
     <div class="wrap-left">
       <div class="logo" />
       <span>Kris Wu</span>
@@ -9,18 +9,32 @@
         <router-link to="/">首页</router-link>
       </li>
       <li>
-        <a>关于我</a>
+        <router-link to="/">关于我</router-link>
       </li>
       <li>
-        <a>前端</a>
+        <router-link to="/">前端</router-link>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
+import { toRefs, watch } from 'vue'
 export default {
-  
+  props: {
+    flag: Boolean,
+  },
+  setup (props) {
+    const state = {
+      flag: props.flag
+    }
+    watch(()=>props.flag, (newVal, oldVal)=>{
+      state.flag = newVal;
+    })
+    return {
+      ...toRefs(state)
+    }
+  }
 }
 </script>
 
@@ -31,11 +45,26 @@ nav {
   z-index: 9999;
   width: 100%;
   padding: 10px 20px;
-  color: #FFF;
-  background: #07122E;
+  background: #FFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all .5s;
+  text-decoration: none;
+  a {
+    color: #07122E;
+  }
+  &.bg-change {
+    background: #07122E;
+    a {
+      color: #FFF;
+    }
+    li {
+      &::after { 
+        background-color: #FFF !important;
+      }
+    }
+  }
   .wrap-left {
     display: flex;
     align-items: center;
@@ -49,38 +78,37 @@ nav {
       background-size: 100% 100%;
     }
   }  
-    ul {
-      display: flex;
-      li {
-        position: relative;
-        list-style: none;
-        box-sizing: border-box;
-        padding: 10px;
-        margin-right: 10px;
-        cursor: pointer;
+  ul {
+    display: flex;
+    li {
+      position: relative;
+      list-style: none;
+      box-sizing: border-box;
+      padding: 10px;
+      margin-right: 10px;
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #07122E;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: .3s ease-in-out;
+      }
+      &:hover {
         &::after {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          bottom: 0;
-          left: 0;
-          background-color: #FFF;
-          visibility: hidden;
-          transform: scaleX(0);
-          transition: .3s ease-in-out;
-        }
-        &:hover {
-          &::after {
-            visibility: visible;
-            transform: scaleX(1);
-          }
-        }
-        a {
-          color: #FFF;
-          text-decoration: none;
+          visibility: visible;
+          transform: scaleX(1);
         }
       }
+      a {
+        text-decoration: none;
+      }
     }
+  }
 }
 </style>
