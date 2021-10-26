@@ -1,4 +1,4 @@
-#!/bin/sh -il
+#!/bin/sh
 
 echo "开始执行了vue脚本文件"
 
