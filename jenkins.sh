@@ -3,10 +3,10 @@
 echo "开始执行了vue脚本文件"
 
 echo "开始下载node_module"
-npm i
+sudo npm i
 
 echo "开始打包"
-npm run build
+sudo npm run build
 
 echo "清空nginx下的文件"
 sudo rm -rf '/usr/share/nginx/html/dist'
