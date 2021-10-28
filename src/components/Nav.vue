@@ -51,12 +51,12 @@ nav {
   align-items: center;
   transition: all .5s;
   text-decoration: none;
-  a {
+  a, span {
     color: #07122E;
   }
   &.bg-change {
     background: #07122E;
-    a {
+    a, span {
       color: #FFF;
     }
     li {
