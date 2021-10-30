@@ -5,7 +5,7 @@
     <div class="wrap">
       <div class="main container">
         <!-- 左侧文章 -->
-        <div class="article">
+        <!-- <div class="article">
           <ArticleItem  v-for="(item) in list" :key="item"/>
           <div class="demo-pagination-block">
             <el-pagination
@@ -19,9 +19,9 @@
             >
             </el-pagination>
           </div>
-        </div>
+        </div> -->
         <!-- 右侧个人 -->
-        <div class="master">
+        <!-- <div class="master">
           <div class="avatar">
             <el-avatar :size="100" :src="avator"></el-avatar>
           </div>
@@ -53,6 +53,25 @@
               <el-tag>爱吃炸鸡，串串</el-tag>
             </div>
           </div>
+        </div> -->
+        <!-- ------------------ -->
+        <!-- <h3>壁纸推荐</h3> -->
+        <div class="carousel-box">
+          <Carousel @confirm="handleClickIndicator"/>
+          <div class="carousel-bottom">
+            <Carousel ref="carouselMirror"/>
+          </div>
+        </div>
+        <div class="work-box">
+          <img src="../../assets/img/home/work.png"/>
+          <div class="tip-rard">
+            <h3>上班族</h3>
+            <p>地点：广东广州</p>
+            <p>职业：前端工程师</p>
+            <p>工龄：1年 ~ 2年</p>
+            <p>兴趣：音乐、网球、动漫</p>
+            <p>微信：Kriswu_98</p>
+          </div>
         </div>
       </div>
     </div>
@@ -60,15 +79,17 @@
 </template>
 
 <script>
-import { reactive, toRefs } from 'vue';
+import { reactive, ref, toRefs } from 'vue';
 import My from '../../components/Home/My.vue';
 import ArticleItem from '../../components/Home/listItem.vue';
 import avator from '../../assets/img/portrait.jpg';
+import Carousel from '../../components/Home/Carousel.vue';
 export default {
   name: 'home',
   components: {
     My,
-    ArticleItem
+    ArticleItem,
+    Carousel
   },
   setup () {
     const state = reactive({
@@ -79,6 +100,7 @@ export default {
       pageSzie: 10,
       avator
     });
+    const carouselMirror = ref(null);
     // 分页数量修改
     const handleSizeChange = (val)=> {
       state.pageSzie = val;
@@ -87,11 +109,16 @@ export default {
     const handleCurrentChange = (val) => {
       state.page = val;
     }
-
+    // 轮播图切换触发
+    const handleClickIndicator = (val) => {
+      carouselMirror.value.carousel.setActiveItem(val)
+    }
     return {
+      carouselMirror,
       ...toRefs(state),
       handleSizeChange,
-      handleCurrentChange
+      handleCurrentChange,
+      handleClickIndicator
     };
   }
 }
@@ -100,9 +127,9 @@ export default {
 <style lang="less" scoped>
 .home {
   .container {
-    display: flex;
-    align-items: flex-start;
-    margin: 20px 0;
+    // display: flex;
+    // align-items: flex-start;
+    margin: 40px 0;
     .article {
       width: 70%;
     }
@@ -174,6 +201,59 @@ export default {
             margin-bottom: 5px;
           }
         }
+      }
+    }
+    // --------
+    .carousel-box {
+      width: 100%;
+      height: 600px;
+      overflow:hidden;
+      position: relative;
+      .carousel-bottom {
+        position: absolute;
+        bottom: -132px;
+        width: 100%;
+        // transform: rotateX(217deg) rotateZ(360deg);
+        transform: rotateX(180deg);
+        opacity: 0.8;
+        // filter: contrast(0.5);
+        pointer-events: none;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 270px;
+          bottom: 0;
+          z-index: 9999;
+          background: linear-gradient(rgb(255, 255, 255) 4%, transparent 85%)
+        }
+      }
+    }
+    .work-box {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      margin-top: 40px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: rotateY(180deg);
+      }
+      .tip-rard {
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 9999;
+        width: 430px;
+        height: 312px;
+        margin-top: -148px;
+        padding: 10px;
+        background: rgba(7, 18, 46, .5);
+        color: #FFF;
+        text-align: right;
+        line-height: 2;
       }
     }
   }

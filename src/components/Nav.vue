@@ -9,10 +9,10 @@
         <router-link to="/">首页</router-link>
       </li>
       <li>
-        <router-link to="/">关于我</router-link>
+        <router-link to="/">文章</router-link>
       </li>
       <li>
-        <router-link to="/">前端</router-link>
+        <router-link to="/">关于我</router-link>
       </li>
     </ul>
   </nav>
