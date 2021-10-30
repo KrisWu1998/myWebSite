@@ -53,6 +53,9 @@ export default {
 .router-view {
   background: #FFF;
 }
+.el-backtop {
+  z-index: 9999;
+}
 .fiexd-scroll {
   width: 50px;
   height: 50px;
