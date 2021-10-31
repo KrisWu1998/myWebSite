@@ -26,12 +26,12 @@ import bg6 from '../../assets/img/home/bg6.jpg';
 export default {
   setup(props, ctx) {
     const imgObj = {
-      0: bg1,
+      0: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fgss0.baidu.com%2F-Po3dSag_xI4khGko9WTAnF6hhy%2Fzhidao%2Fpic%2Fitem%2F55e736d12f2eb938789bd698d2628535e4dd6fe2.jpg&refer=http%3A%2F%2Fgss0.baidu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1638265814&t=0967690bc4ebeba0b34356b8fe64894e',
       1: bg2,
-      2: bg3,
-      3: bg4,
-      4: bg5,
-      5: bg6
+      2: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2F8f90a8cbe8a8beda8517608e34f3c21d8288c893.jpg&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1638265883&t=40b0d10950458ba34e1f427bd0e6f4d4',
+      3: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2019-02-19%2F5c6b7cbc98f1a.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1638265908&t=2ce2278a136f9524494d24df2cd21ac8',
+      4: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2020-10-12%2F5f8408325b8a7.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1638265944&t=5789557a51696aca43081a3811c1b092',
+      5: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg01.vgtime.com%2Fgame%2Fcover%2F2018%2F09%2F18%2F180918143726118.jpg&refer=http%3A%2F%2Fimg01.vgtime.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1638266048&t=1cba648fe62324e149ef1137eb7338d6'
     };
     const carousel = ref(null);
     const change = (val)=>{
