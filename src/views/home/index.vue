@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="work-box">
-          <img src="../../assets/img/home/work.png"/>
+          <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.vjshi.com%2F2018-11-12%2Fb73d52b8e54de54a7fd620ded62c25ff%2F00001.jpg%3Fx-oss-process%3Dstyle%2Fwatermark&refer=http%3A%2F%2Fpic.vjshi.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1638266768&t=eb8f83ba2beca02ce40ea72bd7b3895b"/>
           <div class="tip-rard">
             <h3>上班族</h3>
             <p>地点：广东广州</p>
@@ -238,7 +238,7 @@ export default {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transform: rotateY(180deg);
+        // transform: rotateY(180deg);
       }
       .tip-rard {
         box-sizing: border-box;
