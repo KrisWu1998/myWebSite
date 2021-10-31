@@ -17,7 +17,6 @@
 
 <script>
 import { ref } from 'vue';
-import bg2 from '../../assets/img/home/bg2.jpg';
 export default {
   setup(props, ctx) {
     const imgObj = {
