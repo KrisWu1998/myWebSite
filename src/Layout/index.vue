@@ -1,6 +1,6 @@
 <template>
   <div class="container" ref="container">
-    <Nav :flag="isBeyondHeader"/>
+    <Nav />
     <Header/>
     <div class="router-view">
       <router-view />
@@ -22,7 +22,8 @@
 import Nav from '../components/Nav.vue';
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
-import { ref, onMounted, reactive, toRefs } from 'vue';
+import { onMounted } from 'vue';
+import { useStore } from "vuex";
 export default {
   name: 'Layout',
   components: {
@@ -31,16 +32,19 @@ export default {
     Footer
   },
   setup () {
-    const state = reactive({
-      isBeyondHeader: false, // 是否已滚动到内容区
-    })
+
+    const store = useStore();
+
     onMounted(()=>{
       window.addEventListener('scroll', function () {
-        state.isBeyondHeader = document.documentElement.scrollTop >= 390;
+        store.dispatch('setScrollTop', document.documentElement.scrollTop)
+        // console.log(store.state.scrollTop)
+        // state.isBeyondHeader = document.documentElement.scrollTop >= 390;
       })
-    })
+    });
+
     return {
-      ...toRefs(state)
+      
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <nav :class="['wrap', flag ? 'bg-change' : '']">
+  <nav :class="['wrap', classChange ? 'bg-change' : '']">
     <div class="wrap-left">
       <div class="logo" />
       <span>Kris Wu</span>
@@ -19,20 +19,24 @@
 </template>
 
 <script>
-import { toRefs, watch } from 'vue'
+import { watch, computed } from 'vue'
+import { useStore } from "vuex";
 export default {
-  props: {
-    flag: Boolean,
-  },
   setup (props) {
-    const state = {
-      flag: props.flag
-    }
+
+    const store = useStore();
+
+    const classChange = computed(()=>{
+      const scrollTop = store.state.scrollTop;
+      return scrollTop >= 390;
+    });
+
     watch(()=>props.flag, (newVal, oldVal)=>{
       state.flag = newVal;
     })
+
     return {
-      ...toRefs(state)
+      classChange
     }
   }
 }
