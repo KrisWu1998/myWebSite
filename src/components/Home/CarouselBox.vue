@@ -4,7 +4,7 @@
       <div class="carousel-box">
         <Carousel @confirm="handleClickIndicator"/>
         <div class="carousel-bottom">
-          <Carousel ref="carouselMirror"/>
+          <Carousel ref="carouselMirror" class="clone"/>
         </div>
       </div>
     </div>
@@ -78,5 +78,9 @@ export default {
     }
   }
 }
-
+.clone {
+  :deep(.is-active) {
+    top: -17% !important;
+  }
+}
 </style>
