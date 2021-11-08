@@ -21,15 +21,19 @@ export default {
 header {
   width: 100%;
   height: calc(450px);
+  background: rgba(62, 105, 167, .7);
   .imgBg {
-    position: fixed;
-    z-index: -1;
+    // position: fixed;
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 400px;
     padding-top: 50px;
     background: url('../assets/img/bg.jpg');
     background-repeat: no-repeat;
     background-size:cover;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
     .mask {
       position: absolute;
       top: 0;
@@ -38,6 +42,8 @@ header {
       right: 0;
       background: #000;
       opacity: 0.3;
+      border-bottom-left-radius: 10%;
+      border-bottom-right-radius: 10%;
     }
     h1, p {
       display: flex;

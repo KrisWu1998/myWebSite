@@ -55,6 +55,8 @@ export default {
   width: 100%;
 }
 .router-view {
+  position: relative;
+  z-index: 2;
   background: #FFF;
 }
 .el-backtop {
