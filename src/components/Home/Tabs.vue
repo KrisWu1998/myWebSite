@@ -9,7 +9,8 @@
             </svg>
           </div>
           <div class="item-right">
-
+            <h5>前端开发</h5>
+            <h4>专注于网站设计、网站交互</h4>
           </div>
         </div>
       </div>
@@ -20,6 +21,10 @@
               <use xlink:href="#icon-didian"></use>
             </svg>
           </div>
+          <div class="item-right">
+            <h5>工作地点</h5>
+            <h4>现居于：广东广州</h4>
+          </div>
         </div>
       </div>
       <div class="tabs-item">
@@ -28,6 +33,10 @@
             <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-xinrenzhinan"></use>
             </svg>
+          </div>
+          <div class="item-right">
+            <h5>成长形态</h5>
+            <h4>90后、男子汉</h4>
           </div>
         </div>
       </div>
@@ -110,7 +119,14 @@ export default {
       }
       .item-right {
         flex: 1;
-
+        h5 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        h4 {
+          color: rgba(0, 0, 0, .7);
+        }
       }
     }
     &:hover {

@@ -21,7 +21,7 @@ export default {
 header {
   width: 100%;
   height: calc(450px);
-  background: rgba(62, 105, 167, .7);
+  background-color: rgba(62, 105, 167, 0.7);;
   .imgBg {
     // position: fixed;
     position: relative;
@@ -29,21 +29,19 @@ header {
     width: 100%;
     height: 400px;
     padding-top: 50px;
-    background: url('../assets/img/bg.jpg');
+    background: url('../assets/img/bg.png');
     background-repeat: no-repeat;
     background-size:cover;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    background-position: center center;
     .mask {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-      background: #000;
-      opacity: 0.3;
-      border-bottom-left-radius: 10%;
-      border-bottom-right-radius: 10%;
+      // background: #000;
+      // opacity: 0.3;
+      // background: rgba(0, 0, 0, .3);
     }
     h1, p {
       display: flex;
