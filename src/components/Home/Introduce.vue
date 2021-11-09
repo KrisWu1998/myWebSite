@@ -26,6 +26,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.wrap {
+  background: url('https://demosc.chinaz.net/Files/DownLoad/moban/202109/moban5765/image/bg-gray.png') no-repeat;
+  background-size: cover;
+}
 .introduce-box {
   box-sizing: border-box;
   display: flex;
