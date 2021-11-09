@@ -3,12 +3,12 @@
     <div class="main introduce-box">
       <div class="left"></div>
       <div class="right">
-        <p>很高兴看到你的出现</p>
+        <!-- <p>很高兴看到你的出现</p> -->
         <h4>
-          时间总是在行走，我们虽要珍惜时间，合理使用。但当你感觉到累了，停一下，也是一种进步。生活不止眼前的苟且，还有诗和远方呢！
+          时间总是在行走，我们虽要珍惜时间，合理使用。但当你感觉到累了，停下来，也是一种进步。生活不止眼前的苟且，还有诗和远方呢！
         </h4>
         <hr>
-        <p>Nice to see you show up</p>
+        <!-- <p>Nice to see you show up</p> -->
         <h4>
           Time is always walking, although we should cherish the time, reasonable use. But when you feel tired, stop for a while, also a kind of progress. Life is not only the casual, there are poems and distance!
         </h4>
@@ -45,17 +45,14 @@ export default {
     height: 100%;
     padding: 10px 0;
     letter-spacing: 1px;
-    p {
-      text-align: center;
-      font-size: 18px;
-      font-weight: 700;
-    }
     h4 {
-      text-indent: 2em;
+      line-height: 2;
+      font-weight: 700;
       color: rgba(0, 0, 0, .7);
     }
     hr {
       margin: 40px 0;
+      border: none;
     }
   }
 }
