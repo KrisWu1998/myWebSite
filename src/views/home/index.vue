@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <Tabs />
+    <Introduce />
     <!-- <CarouselBox />
     <Content />
     <My /> -->
@@ -13,13 +14,15 @@ import { reactive, ref, toRefs } from 'vue';
 // import Content from '../../components/Home/Content.vue';
 // import My from '../../components/Home/My.vue';
 import Tabs from '../../components/Home/Tabs.vue';
+import Introduce from '../../components/Home/Introduce.vue';
 export default {
   name: 'home',
   components: {
     // CarouselBox,
     // Content,
     // My
-    Tabs
+    Tabs,
+    Introduce
   },
   setup () {
     
@@ -30,6 +33,6 @@ export default {
 <style lang="less" scoped>
 .home {
   width: 100%;
-  height: 600px;
+  // height: 600px;
 }
 </style>

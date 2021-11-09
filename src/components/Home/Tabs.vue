@@ -54,7 +54,7 @@ export default {
 
 <style lang="less" scoped>
 .wrap {
-  background: rgba(62, 105, 167, .7);
+  // background: rgba(62, 105, 167, .7);
 }
 .tabs-box {
   box-sizing: border-box;

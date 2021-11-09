@@ -21,7 +21,7 @@ export default {
 header {
   width: 100%;
   height: calc(450px);
-  background-color: rgba(62, 105, 167, 0.7);;
+  // background-color: rgba(62, 105, 167, 0.7);;
   .imgBg {
     // position: fixed;
     position: relative;
