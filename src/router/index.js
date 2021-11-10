@@ -20,8 +20,14 @@ const routes = [
         name: 'articleDetail',
         component: () => import('../views/article/index.vue')
       }
-    ]
+    ],
   },
+  {
+    path: '/:pathMatch(.*)',
+    redirect: {
+      name: 'home'
+    },
+  }
 ]
 
 const router = createRouter({
