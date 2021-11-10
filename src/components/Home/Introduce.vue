@@ -14,11 +14,14 @@
         </h4>
       </div>
     </div>
+    <RotateIcon />
   </div>
 </template>
 
 <script>
+import RotateIcon from '../RotateIcon.vue';
 export default {
+  components: {RotateIcon},
   setup () {
 
   }

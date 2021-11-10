@@ -2,6 +2,7 @@
   <div class="home">
     <Tabs />
     <Introduce />
+    <City />
     <!-- <CarouselBox />
     <Content />
     <My /> -->
@@ -15,6 +16,7 @@ import { reactive, ref, toRefs } from 'vue';
 // import My from '../../components/Home/My.vue';
 import Tabs from '../../components/Home/Tabs.vue';
 import Introduce from '../../components/Home/Introduce.vue';
+import City from '../../components/Home/City.vue';
 export default {
   name: 'home',
   components: {
@@ -22,7 +24,8 @@ export default {
     // Content,
     // My
     Tabs,
-    Introduce
+    Introduce,
+    City
   },
   setup () {
     
