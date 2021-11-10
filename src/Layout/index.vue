@@ -22,7 +22,7 @@
 import Nav from '../components/Nav.vue';
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
-import { onMounted } from 'vue';
+import { onMounted, reactive, toRefs } from 'vue';
 import { useStore } from "vuex";
 export default {
   name: 'Layout',
@@ -33,18 +33,22 @@ export default {
   },
   setup () {
 
+    const state = reactive({
+      isBeyondHeader: false
+    });
+
     const store = useStore();
 
     onMounted(()=>{
       window.addEventListener('scroll', function () {
         store.dispatch('setScrollTop', document.documentElement.scrollTop)
         // console.log(store.state.scrollTop)
-        // state.isBeyondHeader = document.documentElement.scrollTop >= 390;
+        state.isBeyondHeader = document.documentElement.scrollTop >= 390;
       })
     });
 
     return {
-      
+      ...toRefs(state)
     }
   }
 }
