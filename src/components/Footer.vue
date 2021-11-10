@@ -2,7 +2,7 @@
   <footer class="wrap">
     <div class="main">
       <a href="https://beian.miit.gov.cn">
-        备案/许可证编号为：粤ICP备2021151921号
+        粤ICP备2021151921号
       </a>
     </div>
   </footer>
