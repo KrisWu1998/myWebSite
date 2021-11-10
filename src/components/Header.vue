@@ -29,7 +29,7 @@ header {
     width: 100%;
     height: 400px;
     padding-top: 50px;
-    background: url('../assets/img/bg.png');
+    background: url('http://www.kriswuzz.com/img/bg.png');
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center center;
