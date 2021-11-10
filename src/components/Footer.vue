@@ -1,7 +1,9 @@
 <template>
   <footer class="wrap">
     <div class="main">
-      本网站纯属个人兴趣，如有雷同，纯属巧合！！！
+      <a href="https://beian.miit.gov.cn">
+        备案/许可证编号为：粤ICP备2021151921号
+      </a>
     </div>
   </footer>
 </template>
@@ -22,6 +24,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  a {
+    text-decoration: none;
+    color: #FFF;
   }
 }
 </style>
