@@ -1,8 +1,8 @@
 <template>
   <footer class="wrap">
     <div class="main">
-      <a href="https://beian.miit.gov.cn">
-        粤ICP备2021151921号
+      <a href="https://beian.miit.gov.cn" target="view_window">
+        粤ICP备2021151921号-1
       </a>
     </div>
   </footer>
