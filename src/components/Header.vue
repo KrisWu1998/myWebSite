@@ -60,9 +60,9 @@ header {
     }
   }
 }
-@media screen and (max-width: 1200px){
-  .imgBg {
-    background-size: 100% 100% !important;
-  }
-}
+// @media screen and (max-width: 1200px){
+//   .imgBg {
+//     background-size: 100% 100% !important;
+//   }
+// }
 </style>

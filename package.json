@@ -8,6 +8,7 @@
   "dependencies": {
     "@vitejs/plugin-vue": "^2.2.0",
     "element-plus": "^1.0.2-beta.71",
+    "vite-plugin-cdn-import": "^0.3.5",
     "vue": "^3.0.4",
     "vue-router": "^4.0.9",
     "vuex": "^4.0.2"
