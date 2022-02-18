@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <div class="main tabs-box">
+    <div class="tabs-box">
       <div class="tabs-item">
         <div class="item-content">
           <div class="item-icon">
@@ -53,9 +53,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.wrap {
-  // background: rgba(62, 105, 167, .7);
-}
 .tabs-box {
   box-sizing: border-box;
   position: relative;
@@ -68,13 +65,29 @@ export default {
     box-sizing: border-box;
     box-shadow: 0px 40px 60px 0px rgba(0, 0, 0, .1);
     display: flex;
+    flex: 1;
     position: relative;
     top: -40px;
-    width: 370px;
+    // width: 370px;
     height: 170px;
     padding: 50px 40px 40px;
+    margin-right: 30px;
     background: #FFF;
     border-radius: 20px;
+    &:hover {
+      .item-icon {
+        &::after {
+          transform: scale(1);
+          opacity: 1;
+        }
+        .icon {
+          color: #FFF;
+        }
+      }
+    }
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
     .item-content {
       display: flex;
       width: 100%;
@@ -129,17 +142,7 @@ export default {
         }
       }
     }
-    &:hover {
-      .item-icon {
-        &::after {
-          transform: scale(1);
-          opacity: 1;
-        }
-        .icon {
-          color: #FFF;
-        }
-      }
-    }
+    
   }
 }
 </style>

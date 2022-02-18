@@ -56,7 +56,9 @@ export default {
 
 <style lang="less" scoped>
 .container {
-  width: 100%;
+  // width: 100%;
+  min-width: 1200px;
+  min-height: 100vh;
 }
 .router-view {
   position: relative;

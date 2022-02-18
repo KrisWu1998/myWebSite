@@ -1,10 +1,8 @@
 <template>
   <footer class="wrap">
-    <div class="main">
-      <a href="https://beian.miit.gov.cn" target="view_window">
-        粤ICP备2021151921号-1
-      </a>
-    </div>
+    <a href="https://beian.miit.gov.cn" target="view_window">
+      粤ICP备2021151921号-1
+    </a>
   </footer>
 </template>
 
@@ -16,7 +14,6 @@ export default {
 
 <style lang="less" scoped>
 footer {
-  height: 30px;
   padding: 10px;
   background: #07122E !important;
   color: #FFF;
@@ -26,8 +23,10 @@ footer {
     align-items: center;
   }
   a {
-    text-decoration: none;
     color: #FFF;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-decoration: none;
   }
 }
 </style>

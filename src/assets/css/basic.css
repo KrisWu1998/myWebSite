@@ -7,7 +7,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  /* min-width: 1200px; */
+  box-sizing: border-box;
 }
-.main {
-  width: 1200px;
-}
+/* .main {
+  min-width: 1200px;
+} */
