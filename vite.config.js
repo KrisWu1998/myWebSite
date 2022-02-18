@@ -11,7 +11,11 @@ export default defineConfig({
     vue(),
     importToCDN({
       modules: [
-        autoComplete('vue'),
+        {
+          name: 'vue',
+          var: 'Vue',
+          path: 'https://unpkg.com/vue@next',
+        },
         {
           name: 'element-plus',
           var: 'ElementPlus',
