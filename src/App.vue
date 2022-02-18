@@ -1,16 +1,14 @@
 <template>
-  <el-config-provider :locale="locale">
-    <router-view />
-  </el-config-provider>
+  <router-view />
 </template>
 
 <script>
-import zhCn from 'element-plus/lib/locale/lang/zh-cn'
+// import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 export default {
   name: 'App',
   setup () {
     return {
-      locale: zhCn,
+      // locale: zhCn,
     }
   }
 }
