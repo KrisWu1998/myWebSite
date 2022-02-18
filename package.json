@@ -17,7 +17,6 @@
     "@vue/compiler-sfc": "^3.0.4",
     "less": "^3.12.2",
     "less-loader": "^7.0.1",
-    "rollup-plugin-external-globals": "^0.6.1",
     "vite": "^2.8.3",
     "vite-plugin-style-import": "^2.0.0"
   }

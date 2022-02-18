@@ -1,11 +1,8 @@
-// import externalGlobals from 'rollup-plugin-external-globals'
 import {
   defineConfig
 } from 'vite'
 import vue from '@vitejs/plugin-vue';
-import importToCDN, {
-  autoComplete
-} from 'vite-plugin-cdn-import'
+import importToCDN from 'vite-plugin-cdn-import'
 export default defineConfig({
   plugins: [
     vue(),
@@ -25,16 +22,8 @@ export default defineConfig({
       ],
     }),
   ],
-  // build: {
-  //   rollupOptions: {
-  //     external: ['vue', 'element-plus'],
-  //     plugins: [
-  //       externalGlobals({
-  //         vue: 'Vue',
-  //         'element-plus': 'ElementPlus',
-  //       }),
-  //     ],
-  //   }
+  // optimizeDeps: {
+  //   include: ['element-plus/lib/locale/lang/zh-cn'],
   // }
 })
 // module.exports = {
