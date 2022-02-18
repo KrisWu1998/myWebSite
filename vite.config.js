@@ -1,4 +1,4 @@
-import externalGlobals from 'rollup-plugin-external-globals'
+// import externalGlobals from 'rollup-plugin-external-globals'
 import {
   defineConfig
 } from 'vite'
@@ -21,17 +21,17 @@ export default defineConfig({
       ],
     }),
   ],
-  build: {
-    rollupOptions: {
-      external: ['vue', 'element-plus'],
-      plugins: [
-        externalGlobals({
-          vue: 'Vue',
-          'element-plus': 'ElementPlus',
-        }),
-      ],
-    }
-  }
+  // build: {
+  //   rollupOptions: {
+  //     external: ['vue', 'element-plus'],
+  //     plugins: [
+  //       externalGlobals({
+  //         vue: 'Vue',
+  //         'element-plus': 'ElementPlus',
+  //       }),
+  //     ],
+  //   }
+  // }
 })
 // module.exports = {
 //   base: '/',
