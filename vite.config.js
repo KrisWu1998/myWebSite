@@ -3,9 +3,11 @@ import {
 } from 'vite'
 import vue from '@vitejs/plugin-vue';
 import importToCDN from 'vite-plugin-cdn-import'
+import viteCompression from 'vite-plugin-compression'
 export default defineConfig({
   plugins: [
     vue(),
+    viteCompression(),
     importToCDN({
       modules: [
         {
@@ -22,6 +24,15 @@ export default defineConfig({
       ],
     }),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: '[ext]/[name]-[hash].[ext]'
+      }
+    }
+  }
   // optimizeDeps: {
   //   include: ['element-plus/lib/locale/lang/zh-cn'],
   // }
