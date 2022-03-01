@@ -22,12 +22,12 @@ const routes = [
       }
     ],
   },
-  {
-    path: '/:pathMatch(.*)',
-    redirect: {
-      name: 'home'
-    },
-  }
+  // {
+  //   path: '/:pathMatch(.*)',
+  //   redirect: {
+  //     name: 'home'
+  //   },
+  // }
 ]
 
 const router = createRouter({
