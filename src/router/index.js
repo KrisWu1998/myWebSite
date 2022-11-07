@@ -22,6 +22,11 @@ const routes = [
       }
     ],
   },
+  {
+    path: '/love',
+    name: 'love',
+    component: () => import('../views/mylove/index.vue')
+  }
   // {
   //   path: '/:pathMatch(.*)',
   //   redirect: {

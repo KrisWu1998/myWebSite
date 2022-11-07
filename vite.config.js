@@ -20,6 +20,11 @@ export default defineConfig({
           var: 'ElementPlus',
           path: 'https://unpkg.com/element-plus',
           css: 'https://unpkg.com/element-plus/dist/index.css',
+        },
+        {
+          name: 'jquery',
+          var: 'jquery',
+          path: 'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js'
         }
       ],
     }),
@@ -32,6 +37,10 @@ export default defineConfig({
         assetFileNames: '[ext]/[name]-[hash].[ext]'
       }
     }
+  },
+  server: {
+    host: '0.0.0.0',
+    port: '8080',  // 端口号，一般情况下为8080
   }
   // optimizeDeps: {
   //   include: ['element-plus/lib/locale/lang/zh-cn'],
