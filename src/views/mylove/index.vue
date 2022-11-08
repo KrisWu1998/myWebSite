@@ -1,8 +1,8 @@
 <template>
   <div class="envlope-wrapper">
     <div id="envelope" :class="[isInit ? isOpen ? 'open': 'close' : ''] ">
-        <div class="front flap"></div>
-        <div class="front pocket"></div>
+        <div class="front flap" @click="onOpen"></div>
+        <div class="front pocket" @click="onOpen"></div>
          <div :class="['letter', addMove ? 'move' : '', hasRead ? 'closeMove' : '' ]">
             <template v-if="showSkeleton">
               <div class="words line1"></div>
@@ -15,16 +15,26 @@
             </template>
             <div class="read-text" v-show="isShowRead" @click="onMove">滴滴，点我阅读！！</div>
         </div>
-        <!-- <div class="hearts">
+        <div class="hearts" v-if="addMove">
             <div class="heart a1"></div>
             <div class="heart a2"></div>
             <div class="heart a3"></div>
-        </div> -->
+        </div>
     </div>
   </div>
   <div class="reset">
-      <button id="open" @click="onOpen">打开</button>
-      <button id="reset" @click="onReset">关掉信封</button>
+      <!-- <button id="open" @click="onOpen">打开</button> -->
+      <!-- <button id="reset" @click="onReset">关掉信封</button> -->
+      <template v-if="!isOpen">
+        <div class="icon-block">
+          <el-icon style="font-size:36px"><Pointer /></el-icon>
+        </div>
+        <div class="pointer-text">打开信封</div>
+      </template>
+      <template v-else-if="isShowRead">
+        <button id="reset" @click="onReset">合起来</button>
+      </template>
+      
   </div>
 </template>
 
@@ -32,7 +42,7 @@
 import $ from 'jquery';
 import { ref } from 'vue';
 import LoveMsg from '../../components/loveMsg.vue'
-
+import { Pointer } from '@element-plus/icons';
 
 const isInit = ref(false);
 
@@ -47,6 +57,8 @@ const showSkeleton = ref(true);
 const canAddRemove = ref(false);
 
 const onOpen = () => {
+  console.log('isopen---', isOpen.value)
+  if (isOpen.value) return;
   isInit.value = true;
   isOpen.value = true;
 
@@ -308,7 +320,7 @@ const onClose = () => {
   top: 90px;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 20;
 }
 
 .heart {
@@ -356,12 +368,12 @@ const onClose = () => {
   -moz-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: .7s;
-  animation-delay: .7s;
+  /* -webkit-animation-delay: .7s;
+  animation-delay: .7s; */
 }
 
 .a2 {
-  left: 55%;
+  left: 71%;
   -webkit-transform: scale(1);
   transform: scale(1);
   opacity: 1;
@@ -369,12 +381,12 @@ const onClose = () => {
   -moz-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: .7s;
-  animation-delay: .7s;
+  /* -webkit-animation-delay: .7s;
+  animation-delay: .7s; */
 }
 
 .a3 {
-  left: 10%;
+  left: -13%;
   -webkit-transform: scale(0.8);
   transform: scale(0.8);
   opacity: 1;
@@ -382,8 +394,8 @@ const onClose = () => {
   -moz-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: .7s;
-  animation-delay: .7s;
+  /* -webkit-animation-delay: .7s;
+  animation-delay: .7s; */
 }
 
 @-webkit-keyframes slideUp {
@@ -458,5 +470,21 @@ const onClose = () => {
 .reset button:hover {
   background-color: #0077B2;
   color: #fff;
+}
+
+.icon-block {
+  margin-bottom: 10px;
+  animation: pointerMove 2s ease infinite;
+}
+@keyframes pointerMove {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 </style>
