@@ -3,7 +3,7 @@
 echo "开始执行了vue脚本文件"
 
 echo "开始下载node_module"
-npm install
+yarn install
 
 echo "开始打包"
 npm run build
