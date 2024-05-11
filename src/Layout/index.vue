@@ -42,8 +42,7 @@ export default {
     onMounted(()=>{
       window.addEventListener('scroll', function () {
         store.dispatch('setScrollTop', document.documentElement.scrollTop)
-        // console.log(store.state.scrollTop)
-        state.isBeyondHeader = document.documentElement.scrollTop >= 390;
+        state.isBeyondHeader = document.documentElement.scrollTop >= 50;
       })
     });
 
@@ -56,8 +55,6 @@ export default {
 
 <style lang="less" scoped>
 .container {
-  // width: 100%;
-  min-width: 1200px;
   min-height: 100vh;
 }
 .router-view {
