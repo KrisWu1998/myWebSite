@@ -22,8 +22,7 @@ export default {
     // Content,
     // My
     Tabs,
-    Introduce,
-    City
+    Introduce
   },
   setup () {
     
