@@ -43,7 +43,7 @@ export default {
     width: 370px;
     height: 100%;
     margin-right: 40px;
-    background: url('http://www.kriswuzz.com/img/cjml.png') no-repeat center;
+    background: url('http://www.kriswuzz.com:7070/img/cjml.png') no-repeat center;
     background-size: 100% 100%;
   }
   .right {
