@@ -13,7 +13,7 @@ export default defineConfig({
         {
           name: 'vue',
           var: 'Vue',
-          path: 'https://unpkg.com/vue@next',
+          path: 'https://unpkg.com/vue@3',
         },
         {
           name: 'element-plus',
